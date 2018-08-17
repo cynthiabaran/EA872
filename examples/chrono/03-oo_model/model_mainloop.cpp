@@ -44,12 +44,12 @@ int main ()
     for (int j=0; j<corpos->size(); j++)
     {
       std::cout << i << " t=" << (t1-T)/1000. << " - Altura = ";
-      std::cout << (*corpos)[j]->get_posicao() << " - Velocidade = ";
+      std::cout << (*corpos)[j]->get_posicao() << " - Vuelocidade = ";
       std::cout << (*corpos)[j]->get_velocidade() << std::endl;
     }
 
     // Condicao de parada
-    if ( (t1-T) > 3000 ) break;
+    if ( (t1-T) > 5000 ) break;
 
     std::this_thread::sleep_for (std::chrono::milliseconds(100));
     i++;

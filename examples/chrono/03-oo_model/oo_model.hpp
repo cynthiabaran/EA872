@@ -5,13 +5,15 @@
 class Corpo {
   private:
   float massa;
+  float aceleracao;
   float velocidade;
   float posicao;
 
   public:
   Corpo(float massa, float velocidade, float posicao);
-  void update(float nova_velocidade, float nova_posicao);
+  void update(float nova_aceleracao, float nova_velocidade, float nova_posicao);
   float get_massa();
+  float get_aceleracao();
   float get_velocidade();
   float get_posicao();
 };
