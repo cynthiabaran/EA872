@@ -55,14 +55,14 @@ Fisica::Fisica(ListaDeCorpos *ldc) {
 void Fisica::update(float deltaT) {
   // Atualiza parametros dos corpos!
   std::vector<Corpo *> *c = this->lista->get_corpos();
-  float K_ELASTICA = 50;
-  float FATOR_AMORT = 5;
+  float K_ELASTICA = 20;
+  float FATOR_AMORT = 10;
 
   for (int i = 0; i < (*c).size(); i++) {
-    float forca_elastica = K_ELASTICA * (*c)[i]->get_posicao();
+    float forca_elastica = (-1) * K_ELASTICA * (*c)[i]->get_posicao();
     float forca_amortecedor = FATOR_AMORT * (*c)[i]->get_velocidade();
     float new_acel = (*c)[i]->get_aceleracao() + forca_amortecedor / (*c)[i]->get_massa() + forca_elastica / (*c)[i]->get_massa();
-    float new_vel = (*c)[i]->get_velocidade() + (float)deltaT * (-10.0)/1000 * new_acel;
+    float new_vel = (*c)[i]->get_velocidade() + (float)deltaT / 1000 * new_acel;
     float new_pos = (*c)[i]->get_posicao() + (float)deltaT * new_vel/1000;
     (*c)[i]->update(new_acel, new_vel, new_pos);
   }
