@@ -44,7 +44,7 @@ int main ()
     for (int j=0; j<corpos->size(); j++)
     {
       std::cout << i << " t=" << (t1-T)/1000. << " - Altura = ";
-      std::cout << (*corpos)[j]->get_posicao() << " - Vuelocidade = ";
+      std::cout << (*corpos)[j]->get_posicao() << " - Velocidade = ";
       std::cout << (*corpos)[j]->get_velocidade() << std::endl;
     }
 
