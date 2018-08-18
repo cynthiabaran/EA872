@@ -2,6 +2,12 @@
 #ifndef OO_MODEL_HPP
 #define OO_MODEL_HPP
 
+/* 
+Cynthia Baran           135371
+Guilherme Fontebasso    135973
+*/
+
+
 class Corpo {
   private:
   float massa;
