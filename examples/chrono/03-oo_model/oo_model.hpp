@@ -14,14 +14,18 @@ class Corpo {
   float aceleracao;
   float velocidade;
   float posicao;
+  float elasticidade;
+  float amortecimento;
 
   public:
-  Corpo(float massa, float velocidade, float posicao);
+  Corpo(float massa, float velocidade, float posicao, float elasticidade, float amortecimento);
   void update(float nova_aceleracao, float nova_velocidade, float nova_posicao);
   float get_massa();
   float get_aceleracao();
   float get_velocidade();
   float get_posicao();
+  float get_elasticidade();
+  float get_amortecimento();
 };
 
 class ListaDeCorpos {

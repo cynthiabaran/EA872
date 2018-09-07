@@ -12,7 +12,7 @@ uint64_t get_now_ms() {
 
 int main ()
 {
-  Corpo *c = new Corpo(10, 0, 10);
+  Corpo *c = new Corpo(10, 0, 10, 2, 2);
   ListaDeCorpos *l = new ListaDeCorpos();
   l->add_corpo(c);
 
